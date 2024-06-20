@@ -1,0 +1,16 @@
+
+.swiper-pagination-bullet {
+  width: 120px; /* Ширина буллета */
+  height: 6px; /* Высота буллета */
+  background-color: var(--color-black); /* Цвет буллета */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  width: 120px; /* Ширина активного буллета */
+  height: 6px; /* Высота активного буллета */
+  background-color: var(--color-light, var(--color-light)) !important ; /* Цвет активного буллета */
+  opacity: 1;
+}

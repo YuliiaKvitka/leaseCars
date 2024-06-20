@@ -1,5 +1,13 @@
+
+//src/app/layout.js
 import { Inter } from "next/font/google";
-import "./globals.css";
+
+import '../styles/styles.scss';
+import Head from "next/head";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,9 +17,28 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="../../public/favicon.ico" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </Head>
+      <body className={inter.className}>
+        <div className="wrapper">
+          <Header  />
+          <main className="main">{children}</main>
+          <Footer/>
+        </div>
+      </body>
     </html>
   );
 }
+
+//  https://realfavicongenerator.net/
+// https://favicon.io/

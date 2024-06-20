@@ -1,0 +1,44 @@
+.blog {
+    padding-bottom: 150px;
+
+    &__items {
+        margin-bottom: 70px;
+        padding-top: 150px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+ 
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-img {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--color-black);
+            flex-basis: 446px;
+        }
+
+        &-link {
+            padding: 4px 10px;
+            width: 80px;
+            height: 29px;
+            background: #06f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-light) ;
+
+        }
+    }
+
+}

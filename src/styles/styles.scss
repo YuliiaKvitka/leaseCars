@@ -1,0 +1,45 @@
+// src/styles/styles.scss
+
+// Import reset styles
+@import './base/reset';
+
+// Import typography styles
+@import './base/typography';
+
+// Import utility styles
+@import './utils/variables';
+@import './utils/mixins';
+
+// Import layout styles
+@import './layout/header';
+@import './layout/footer';
+
+// Swiper
+@import './base/_slider.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import 'swiper/css/scrollbar';
+
+
+// Import component styles
+@import './components/Header.module';
+@import './components/Footer.module';
+@import './components/Logo.module';
+@import './components/Menu.module';
+@import './components/Slider.module';
+
+// Import global styles
+@import './base/globals';
+
+
+
+
+
+
+
+
+
+
+
+
