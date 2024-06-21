@@ -1,8 +1,10 @@
 // src/styles/components/Header.module.scss
-
+@import '../utils/mixinsMobile.scss';
 
 .header {
   background-color: var(--color-black);
+  height: auto;
+  width: 100%;
 
   &__main {
     // общие стили для header
@@ -13,11 +15,27 @@
   }
 
   &__inner {
-    padding-top: clamp(1.25rem, calc(0.83rem + 1.39vw), 2.5rem);
-    padding-bottom: 2.8125rem ;
+    padding-top: 40px;
+    padding-bottom: 45px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+   
+
+    @include respond-to(mobile-portrait) {//0px
+  }
+
+  @include respond-to(mobile) {//320px
+    padding-top: 0px;
+    padding-bottom: 0px;
+    
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+   padding-top: 10px;
+    padding-bottom: 10px;
+    
+  }
 
     
   }
@@ -25,4 +43,29 @@
   &__transparent {
     background-color: transparent;
   }
+
+  @include respond-to(mobile-portrait) {//0px
+  }
+
+  @include respond-to(mobile) {//320px
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+  }
+   @include respond-to(tablet) {//576px
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+  }
+
+@include respond-to(tablet-landscape) {//992px
+  }
+@include respond-to(desktop) {//1200px
+  }
+@include respond-to(large-desktop) {//1600px
+  }
+@include respond-to(tv) {//1920px
+  max-width: 100%;
+  }
+
 }

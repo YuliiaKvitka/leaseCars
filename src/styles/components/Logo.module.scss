@@ -1,0 +1,39 @@
+@import '../utils/mixinsMobile.scss';
+
+.logo {
+    box-sizing: border-box;
+
+    & img {
+
+        @include respond-to(mobile-portrait) {//0px
+        }
+        @include respond-to(mobile) {//320px
+            width: 30px;
+            aspect-ratio: 1;
+        } 
+        @include respond-to(mobile-landscape) {//480px
+            width: 40px;
+            aspect-ratio: 1; 
+        }
+         @include respond-to(tablet) {//576px
+             width: 50px;
+            aspect-ratio: 1; 
+  }
+        @include respond-to(tablet-portrait) {//768px
+            width: 50px;
+            aspect-ratio: 1;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            width: 75px;
+            aspect-ratio: 1;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 83px;
+            aspect-ratio: 1;
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
+    }
+}

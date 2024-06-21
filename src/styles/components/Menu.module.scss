@@ -1,4 +1,4 @@
-
+@import '../utils/mixinsMobile.scss';
 .menu {
 
     &__list {
@@ -11,10 +11,48 @@
             color: var(--color-light);
             font-family: var(--font-family);
             font-weight: 700;
+
+            @include respond-to(tablet-portrait) {//768px
+              font-weight: 700;
+              font-size: 14px;
+            }
+            @include respond-to(tablet-landscape) {//992px
+              font-size: 16px;
+            }
+
             &:hover, &:focus {
             color: var(--color-brand);
         }
-        }
-        
+        }     
     }
+
+    @include respond-to(mobile-portrait) {//0px
+  }
+
+  @include respond-to(mobile) {//320px
+     display: none;
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+     display: none;
+  }
+
+  @include respond-to(tablet) {//576px
+     display: none;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    display: flex;
+  }
+
+@include respond-to(tablet-landscape) {//992px
+    display: flex;
+  }
+@include respond-to(desktop) {//1200px
+  }
+@include respond-to(large-desktop) {//1600px
+  }
+@include respond-to(tv) {//1920px
+  }
+
 }

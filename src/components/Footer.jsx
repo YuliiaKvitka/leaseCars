@@ -3,7 +3,7 @@ import styles from '../styles/components/Footer.module.scss'
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={`container`}>
+      <div className='container'>
 
         <nav className={styles.footer__menu}>
 

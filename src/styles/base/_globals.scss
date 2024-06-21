@@ -40,6 +40,36 @@ html, body {
   font-size: 48px;
   font-weight: 700;
   text-align: center;
+  @include respond-to(mobile-portrait) {//0px
+  }
+
+  @include respond-to(mobile) {//320px
+    font-size: 24px;
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+   font-size: 28px;
+
+  }
+
+  @include respond-to(tablet) {//576px
+     font-size: 32px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+     font-size: 32px;
+  }
+
+@include respond-to(tablet-landscape) {//992px
+   font-size: 36px;
+  }
+@include respond-to(desktop) {//1200px
+   font-size: 48px;
+  }
+@include respond-to(large-desktop) {//1600px
+  }
+@include respond-to(tv) {//1920px
+  }
 }
 .container-wrapper {
   margin-top: 140px;
