@@ -1,24 +1,93 @@
+@import '../utils/mixinsMobile.scss';
+
 .blog {
     padding-bottom: 150px;
+   
 
     &__items {
+        margin-inline: 20px;
         margin-bottom: 70px;
         padding-top: 150px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
-    }
 
- 
+        @include respond-to(mobile) {//320px
+            grid-template-columns: repeat(1, 1fr);
+            margin-inline: 0px;
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @include respond-to(tablet-portrait) {//768px
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+    }
 
     &__item {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
 
+        &-wrapper {  
+            width: 100%;
+            display: flex;   
+            justify-content: space-between;
+            // @include respond-to(mobile-landscape) {//480px
+            //     display: flex;
+            //     flex-direction: row;
+            //     justify-content: space-between;
+            // }
+            // @include respond-to(tablet-portrait) {//768px
+            //     flex-direction: column;
+            // }
+            @include respond-to(tablet-landscape) {//992px
+                justify-content: space-between;
+            }
+            @include respond-to(desktop) {//1200px
+                justify-content: space-between;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
+
+        }
+        
         &-img {
             margin-bottom: 30px;
             width: 100%;
+            aspect-ratio: 1;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+                flex-direction: column;
+                width: 100%;
+                aspect-ratio: 1;
+              
+                
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+                flex-direction: column;
+                width: 100%;
+                aspect-ratio: 1;
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                width: 340px;
+               aspect-ratio: 1;
+                
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+                width: 100%;
+                aspect-ratio: 1;
+            }
         }
 
         &-title {
@@ -26,6 +95,25 @@
             font-size: 24px;
             color: var(--color-black);
             flex-basis: 446px;
+
+            // @include respond-to(mobile) {//320px
+            //     max-width: 190px;
+            //     font-size: 16px;
+            // } 
+
+            @include respond-to(mobile-landscape) {//480px
+                font-size: 16px;
+                max-width: 60%;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+                font-size: 20px;
+                max-width: 70%;
+            }
+            @include respond-to(desktop) {//1200px
+                font-size: 24px;
+                max-width: 100%;
+            }
         }
 
         &-link {

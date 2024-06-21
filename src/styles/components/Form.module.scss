@@ -1,9 +1,24 @@
+@import '../utils/mixinsMobile.scss';
+
 .form {
     max-width: 580px;
-    margin: 0 auto;
+    margin-inline:  auto;
     display: flex;
     flex-direction: column;
     gap: 20px; // Отступ между элементами формы
+
+    
+  @include respond-to(mobile) {//320px
+    max-width: 280px;
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+    max-width: 400px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    max-width: 580px;
+  }
 
     &__input-group {
         display: flex;

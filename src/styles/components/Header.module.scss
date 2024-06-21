@@ -5,6 +5,7 @@
   background-color: var(--color-black);
   height: auto;
   width: 100%;
+  position: relative;
 
   &__main {
     // общие стили для header
@@ -20,7 +21,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-   
 
     @include respond-to(mobile-portrait) {//0px
   }
@@ -34,7 +34,10 @@
 @include respond-to(mobile-landscape) {//480px
    padding-top: 10px;
     padding-bottom: 10px;
-    
+    align-items: center;
+  }
+  @include respond-to(tablet-portrait) {//768px
+    align-items: flex-end;
   }
 
     

@@ -11,15 +11,15 @@ const Menu = () => {
                 </li>
 
                 <li className={styles['menu__list-item']}>
-                    <Link href="##" className={styles['menu__list-link']}>PRE-OWNED CARS</Link>
+                    <Link href="/#sec2" className={styles['menu__list-link']}>PRE-OWNED CARS</Link>
                 </li>
 
                 <li className={styles['menu__list-item']}>
-                    <Link href="##" className={styles['menu__list-link']}>FINANCE</Link>
+                    <Link href="/#sec3" className={styles['menu__list-link']}>FINANCE</Link>
                 </li>
 
                 <li className={styles['menu__list-item']}>
-                    <Link href="##" className={styles['menu__list-link']}>LEASE VS BUY</Link>
+                    <Link href="/#sec4" className={styles['menu__list-link']}>LEASE VS BUY</Link>
                 </li>
 
                 <li className={styles['menu__list-item']}>

@@ -18,7 +18,7 @@ export default function Home() {
       <Slider/>
 
 {/* --------------------------------------------- */}
-      <section className={styles['why-lease']}>
+      <section id='sec2' className={styles['why-lease']}>
         <div className="container">
           <h2 className='section-title'>Why Lease with D&M?</h2>
 
@@ -75,7 +75,7 @@ export default function Home() {
         </div>
       </section>
       {/* ------------------------------------------- */}
-      <section className={styles.video} >
+      <section id='sec3' className={styles.video} >
         <div className="container">
           <h2 className={`section-title ${styles.video__title}`}>WELCOME TO D&M LEASING</h2>
           <p className={styles.video__text}>Find out how easy it is to lease from D&M</p>
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </section>
       {/* ------------------------------------------- */}
-      <section className={styles.important}>
+      <section id='sec4' className={styles.important}>
         <div className="container">
           <h2 className={`section-title ${styles.important__title}`}>Important Things to Consider</h2>
           <p className={styles.important__text}>Depending on your circumstances and what is important to you, a lease could be a great option for your next vehicle. Below are some important factors that may influence your decision.</p>

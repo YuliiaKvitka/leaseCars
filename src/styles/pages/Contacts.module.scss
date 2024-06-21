@@ -1,5 +1,22 @@
+@import '../utils/mixinsMobile.scss';
 .contacts {
     padding: 100px 0 150px;
+
+        @include respond-to(mobile) {//320px
+            padding: 30px 0 100px;
+    } 
+
+    @include respond-to(mobile-landscape) {//480px
+        padding: 30px 0 100px;
+    }
+
+
+    @include respond-to(tablet-portrait) {//768px
+        padding: 50px 0 100px;
+    }
+    @include respond-to(tablet-landscape) {//992px
+        padding: 100px 0 150px;
+  }
 
     &__title {
         margin-bottom: 20px;
@@ -11,5 +28,19 @@
         text-align: center;
         margin-bottom: 50px;
         padding: 0 100px;
+
+          @include respond-to(mobile) {//320px
+             font-size: 16px;
+            padding: 0 20px;
+  } 
+
+        @include respond-to(mobile-landscape) {//480px
+            font-size: 20px;
+            padding: 0 20px;
+  }
+  @include respond-to(tablet-portrait) {//768px
+     padding: 0 100px;
+     font-size: 24px;
+  }
     }
 }

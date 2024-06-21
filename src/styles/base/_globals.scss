@@ -27,8 +27,9 @@ html, body {
 }
 .container {
   padding: 0 10px;
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .main {

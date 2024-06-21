@@ -44,8 +44,9 @@ export default function NewCars() {
               >
                 Electrified
               </button>
-              {/* ------------------------------------------------------ */}
+              
             </div>
+            {/* ------------------------------------------------------ */}
             <div className={styles.tabs__content}>
               <div className={`${styles['tabs__content-item']} ${activeTab === 0 ? styles.active : ''}`}>
                 {/* Содержимое для вкладки "Car and Minivan" */}
@@ -213,7 +214,7 @@ export default function NewCars() {
             </div>
           </div>
           <Button/>
-          <Blog/>
+          {/* <Blog/> */}
         </div>
       </div>
     </section>
