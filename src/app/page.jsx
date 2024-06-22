@@ -10,7 +10,7 @@ export default function Home() {
       <section className={styles.top}>
         <div className="container">
           <h1 className={styles.top__title}>Leasing From D&M</h1>
-          <a href="##" className={styles.top__link}>
+          <a href="/new-cars" className={styles.top__link}>
             FIND A CAR
           </a>
         </div>

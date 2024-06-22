@@ -1,24 +1,24 @@
+
 @import '../utils/mixinsMobile.scss';
 
 .form {
     max-width: 580px;
-    margin-inline:  auto;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     gap: 20px; // Отступ между элементами формы
 
-    
-  @include respond-to(mobile) {//320px
-    max-width: 280px;
-  } 
+    @include respond-to(mobile) { //320px
+        max-width: 280px;
+    } 
 
-@include respond-to(mobile-landscape) {//480px
-    max-width: 400px;
-  }
+    @include respond-to(mobile-landscape) { //480px
+        max-width: 400px;
+    }
 
-  @include respond-to(tablet-portrait) {//768px
-    max-width: 580px;
-  }
+    @include respond-to(tablet-portrait) { //768px
+        max-width: 580px;
+    }
 
     &__input-group {
         display: flex;
@@ -78,10 +78,57 @@
         padding: 13px 61px;
         width: 184px;
         height: 47px;
-        font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.3;
         margin: 0 auto;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background-color: var(--color-light);
+            color: var(--color-black);
+            transform: scale(1.05);
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+
+        &.submitting {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+
+        &.submitted {
+            background-color: green;
+        }
+    }
+}
+// --------Modal------------------
+
+.modal {
+
+    &__title {
+        font-weight: 700;
+      font-size: 24px;
+      color: var(--color-black);
+      margin-block: 20px;
+    }
+
+    &__text {
+        color: var(--color-black);
+    }
+
+    &__button {
+        text-transform: uppercase;
+        color: var(--color-light);
+        background-color: var(--color-black);
+        padding: 13px 61px;
+        width: 184px;
+        height: 47px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.3;
+        margin: 20px auto;
+
     }
 }

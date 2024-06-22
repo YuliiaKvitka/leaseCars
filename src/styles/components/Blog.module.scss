@@ -68,8 +68,6 @@
                 flex-direction: column;
                 width: 100%;
                 aspect-ratio: 1;
-              
-                
             } 
 
             @include respond-to(mobile-landscape) {//480px
@@ -80,7 +78,7 @@
 
             @include respond-to(tablet-portrait) {//768px
                 width: 340px;
-               aspect-ratio: 1;
+                aspect-ratio: 1;
                 
             }
 
@@ -125,6 +123,10 @@
             align-items: center;
             justify-content: center;
             color: var(--color-light) ;
+
+            &:hover {
+                opacity: .7;
+            }
 
         }
     }
