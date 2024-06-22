@@ -5,4 +5,4 @@
 
 
 
-Effects of responsive design transformations, modal windows, sliders, animations and hamburger menu to go to a section, gallery, cards are placed in a separate component, data for cards are in a separate file
+This is a vehicle leasing site created with Next.js. Swiper library is integrated into the project. Routing, adaptive layout, modal window and hamburger menu for navigation, animation, gallery, cards are in a separate component, data for cards are in a separate file.
