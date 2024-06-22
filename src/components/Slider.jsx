@@ -37,12 +37,13 @@ export default function Slider() {
                 <SwiperSlide key={index}>
                     <div className={styles.slideContainer}>
                         <Image
-                            className={styles.img}
+                           className={styles.img}
                             src={image.src}
                             alt={image.alt}
                             layout="responsive"
-                            
-                            loading='lazy'
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL={image.blurDataURL}
                         />
                         <div className={styles.slideOverlay} />
                     </div>
